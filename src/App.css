@@ -1,38 +1,93 @@
 .App {
-  text-align: center;
+  background-image: linear-gradient(to right, #141e30, #243b55);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.game-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.card {
+  max-width: 32%;
+  flex: 0 0 32%;
+  width: 100%;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: flex-end;
+  align-items: center;
+  border: 0 none !important;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+@media all and (max-width: 991px) {
+  .card {
+    flex: 0 0 49%;
+    max-width: 49%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media all and (max-width: 767px) {
+  .card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.card-description {
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateY(100%);
+  transition: all .5s ease-in-out;
+}
+
+.card:hover .card-description {
+  transform: translateY(0%);
+}
+
+.card-title__wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.card-title {
+  color: #fff;
+}
+
+.genres {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  flex-wrap: wrap;
+}
+
+.genres li {
+  color: #fff;
+  font-style: italic;
+  list-style: none;
+  margin: 0 5px;
+}
+
+.genres li:after {
+  content: "/";
+  padding-left: 5px;
+}
+
+.genres li:last-child:after {
+  display: none;
+}
+
+.rating {
+  color: #fff;
+}
+
+.title {
+  text-align: center;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-weight: bold;
 }
