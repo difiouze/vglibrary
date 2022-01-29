@@ -9,6 +9,7 @@ import Container from "react-bootstrap/Container";
 function App() {
   const [games, setGames] = useState([]);
   const [searchGame, setSearchGame] = useState("");
+  const [favorite, setFavorite] = useState([]);
 
   const getGames = (searchGame) => {
     axios
@@ -28,6 +29,10 @@ function App() {
       });
   };
 
+const addFavorite = (newGame) => {
+  console.log(newGame);
+}
+
   useEffect(() => {
     getGames(searchGame);
     console.log(searchGame);
@@ -40,7 +45,7 @@ function App() {
           <h1 className="title pt-5 pb-2">Video Games List</h1>
         </header>
         <SearchBox setSearchGame={setSearchGame} />
-        <GameList games={games} />
+        <GameList games={games} favorite={addFavorite}/>
       </Container>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
+import Button from 'react-bootstrap/Button'
 
-const Game = ({ game }) => {
+const Game = ({ game, favorite }) => {
   return (
     <div
       className="card my-3"
@@ -16,7 +17,8 @@ const Game = ({ game }) => {
             <li key={genre.id}>{genre.name}</li>
           ))}
         </ul>
-        <h3 className="rating">Rating: {game.rating}</h3>
+        <h4 className="rating">Rating: {game.rating}</h4>
+        <Button onClick={() => favorite(game)} variant="primary" size="sm">Add to Favorite</Button>
       </div>
     </div>
   );
