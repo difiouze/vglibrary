@@ -4,7 +4,7 @@ import Favorite from './Favorite';
 const Favorites = ({ favorite }) => {
   return (
     <div className='favorites-container'>
-    <h2>Favorite Games saved:</h2>
+    <h2 className='favorites-title'>Favorite Games saved: {favorite.length}</h2>
     <div className='favorites-item-container'>
     {favorite.map((addedGame) => (
             <Favorite addedGame= {addedGame}/>
