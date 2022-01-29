@@ -5,6 +5,7 @@ import GameList from "./components/GameList";
 import SearchBox from "./components/SearchBox";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
+import Favorites from "./components/Favorites"
 
 function App() {
   const [games, setGames] = useState([]);
@@ -30,7 +31,7 @@ function App() {
   };
 
 const addFavorite = (newGame) => {
-  console.log(newGame);
+  setFavorite([...favorite, newGame])
 }
 
   useEffect(() => {
@@ -45,8 +46,9 @@ const addFavorite = (newGame) => {
           <h1 className="title pt-5 pb-2">Video Games List</h1>
         </header>
         <SearchBox setSearchGame={setSearchGame} />
-        <GameList games={games} favorite={addFavorite}/>
+        <GameList games={games} addFavorite={addFavorite}/>
       </Container>
+      <Favorites favorite={favorite} setFavorite={setFavorite} />
     </div>
   );
 }

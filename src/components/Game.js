@@ -1,7 +1,7 @@
 import React from "react";
 import Button from 'react-bootstrap/Button'
 
-const Game = ({ game, favorite }) => {
+const Game = ({ game, addFavorite }) => {
   return (
     <div
       className="card my-3"
@@ -18,7 +18,7 @@ const Game = ({ game, favorite }) => {
           ))}
         </ul>
         <h4 className="rating">Rating: {game.rating}</h4>
-        <Button onClick={() => favorite(game)} variant="primary" size="sm">Add to Favorite</Button>
+        <Button onClick={() => addFavorite(game)} variant="primary" size="sm">Add to Favorite</Button>
       </div>
     </div>
   );
