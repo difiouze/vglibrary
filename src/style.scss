@@ -69,18 +69,18 @@
   padding-left: 0;
   flex-wrap: wrap;
   margin-bottom: 0;
-}
 
-.genres li {
-  color: #fff;
-  font-style: italic;
-  list-style: none;
-  margin: 0 5px;
-}
+  li {
+    color: #fff;
+    font-style: italic;
+    list-style: none;
+    margin: 0 5px;
 
-.genres li:after {
-  content: "/";
-  padding-left: 5px;
+    &:after {
+      content: "/";
+      padding-left: 5px;
+    }
+  }
 }
 
 .genres li:last-child:after {
@@ -144,13 +144,13 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
 
 .favorite-card:hover::after {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .favorites-title {
