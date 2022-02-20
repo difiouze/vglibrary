@@ -209,4 +209,8 @@
   font-weight: bold;
   color: #fff;
 }
+
+.btn-close {
+  z-index: 999;
+}
 /*# sourceMappingURL=style.css.map */
