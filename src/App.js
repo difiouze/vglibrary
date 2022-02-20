@@ -32,6 +32,7 @@ function App() {
 
 const addFavorite = (newGame) => {
   setFavorite([...favorite, newGame])
+  setGames(games.filter((el) => el.id !== newGame.id));
 }
 
   useEffect(() => {
