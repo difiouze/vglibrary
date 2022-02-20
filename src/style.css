@@ -210,7 +210,19 @@
   color: #fff;
 }
 
-.btn-close {
+.favorite-blocktext {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: 999;
+  padding: 10px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -14,9 +14,10 @@ function App() {
 
   const getGames = (searchGame) => {
     axios
-      .get(`https://api.rawg.io/api/games?search=${searchGame}`, {
+      .get(`https://api.rawg.io/api/games?search=${searchGame}&search_exact`, {
         params: {
           key: "bb9dc1950eb54445961359f37e4a4e67",
+          page_size: 30
         },
       })
       .then((response) => {

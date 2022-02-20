@@ -162,5 +162,15 @@
 }
 
 .btn-close {
+  
+}
+
+.favorite-blocktext {
+  background-color: rgba(0, 0, 0, 0.7); 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 999; 
+  padding: 10px;
 }
